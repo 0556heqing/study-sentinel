@@ -1,0 +1,14 @@
+server:
+  port: 8080
+
+cluster:
+  sentinel:
+    node1: 127.0.0.1:8858
+
+spring:
+  application:
+    name: study-sentinel
+  cloud:
+    sentinel:
+      transport:
+        dashboard: ${cluster.sentinel.node1}
